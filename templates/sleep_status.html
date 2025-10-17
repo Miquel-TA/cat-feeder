@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Cat Feeder Sleep Mode</title>
+    <link rel="stylesheet" href="/static/css/status.css" />
+  </head>
+  <body>
+    <main class="status">
+      <h1>Cat Feeder Sleep Mode</h1>
+      {% if active %}
+      <div class="badge asleep">SLEEP MODE ACTIVE</div>
+      {% else %}
+      <div class="badge awake">FEEDER ACTIVE</div>
+      {% endif %}
+      <section>
+        <h2>Schedule</h2>
+        <p>Enabled: {{ 'Yes' if sleep_mode.enabled else 'No' }}</p>
+        <p>Quiet hours: {{ sleep_mode.start }} - {{ sleep_mode.end }} ({{ sleep_mode.timezone }})</p>
+      </section>
+    </main>
+  </body>
+</html>

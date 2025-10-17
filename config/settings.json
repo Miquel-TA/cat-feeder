@@ -1,0 +1,62 @@
+{
+  "queue_delay_seconds": 8,
+  "serial": {
+    "enabled": false,
+    "port": "/dev/ttyUSB0",
+    "baudrate": 115200,
+    "timeout": 2
+  },
+  "sleep_mode": {
+    "enabled": true,
+    "start": "22:00",
+    "end": "07:00",
+    "timezone": "Europe/Madrid"
+  },
+  "tiers": [
+    {
+      "name": "tier1",
+      "min_value": 0,
+      "max_value": 4.99,
+      "message_template": "The user {username} from {platform} gave the cats a crunchy kibble snack!",
+      "sound": "sounds/tier1.mp3",
+      "animation": "animations/tier1.css",
+      "motor": 1
+    },
+    {
+      "name": "tier2",
+      "min_value": 5,
+      "max_value": 9.99,
+      "message_template": "The user {username} from {platform} fed the cats a delicious tuna can!",
+      "sound": "sounds/tier2.mp3",
+      "animation": "animations/tier2.css",
+      "motor": 2
+    },
+    {
+      "name": "tier3",
+      "min_value": 10,
+      "max_value": 19.99,
+      "message_template": "The user {username} from {platform} treated the cats to a salmon feast!",
+      "sound": "sounds/tier3.mp3",
+      "animation": "animations/tier3.css",
+      "motor": 3
+    },
+    {
+      "name": "tier4",
+      "min_value": 20,
+      "max_value": 49.99,
+      "message_template": "The user {username} from {platform} surprised the cats with a mountain of sardines!",
+      "sound": "sounds/tier4.mp3",
+      "animation": "animations/tier4.css",
+      "motor": 4
+    },
+    {
+      "name": "tier5",
+      "min_value": 50,
+      "max_value": null,
+      "message_template": "The user {username} from {platform} just gave the cats a huge sardine banquet!",
+      "sound": "sounds/tier5.mp3",
+      "animation": "animations/tier5.css",
+      "motor": 5
+    }
+  ]
+}

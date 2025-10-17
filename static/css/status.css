@@ -1,0 +1,45 @@
+body {
+  font-family: 'Trebuchet MS', Helvetica, sans-serif;
+  background: radial-gradient(circle at top left, #2b5876, #4e4376);
+  color: #fff;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.status {
+  background: rgba(0, 0, 0, 0.35);
+  padding: 2rem 3rem;
+  border-radius: 24px;
+  text-align: center;
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.45);
+}
+
+.badge {
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+.badge.awake {
+  background: rgba(61, 255, 167, 0.85);
+  color: #0b3d2e;
+}
+
+.badge.asleep {
+  background: rgba(255, 119, 119, 0.9);
+  color: #3d0b0b;
+}
+
+section h2 {
+  margin-bottom: 0.5rem;
+}
+
+section p {
+  margin: 0.25rem 0;
+}
