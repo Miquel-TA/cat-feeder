@@ -1,0 +1,72 @@
+queue:
+  default_delay_seconds: 5
+  minimum_gap_seconds: 10
+  maximum_delay_seconds: 120
+
+sleep:
+  enabled: true
+  timezone: "Europe/Madrid"
+  start: "22:00"
+  end: "07:00"
+  check_interval_seconds: 30
+
+tiers:
+  - name: "Tier 1"
+    minimum_amount: 0
+    maximum_amount: 4.99
+    motor: 1
+    message_template: "{username} from {platform} treated the cats with crunchy kibbles!"
+    animation_class: "pulse"
+    sound: "tier1.mp3"
+    duration_seconds: 6
+  - name: "Tier 2"
+    minimum_amount: 5
+    maximum_amount: 9.99
+    motor: 2
+    message_template: "The user {username} from {platform} fed the cats a delicious tuna can!"
+    animation_class: "glow"
+    sound: "tier2.mp3"
+    duration_seconds: 7
+  - name: "Tier 3"
+    minimum_amount: 10
+    maximum_amount: 24.99
+    motor: 3
+    message_template: "{username} from {platform} served a salmon feast!"
+    animation_class: "sparkle"
+    sound: "tier3.mp3"
+    duration_seconds: 8
+  - name: "Tier 4"
+    minimum_amount: 25
+    maximum_amount: 49.99
+    motor: 4
+    message_template: "{username} from {platform} surprised the cats with gourmet pâté!"
+    animation_class: "pulse"
+    sound: "tier4.mp3"
+    duration_seconds: 9
+  - name: "Tier 5"
+    minimum_amount: 50
+    maximum_amount: null
+    motor: 5
+    message_template: "{username} from {platform} just gave the cats a huge sardine banquet!"
+    animation_class: "sparkle"
+    sound: "tier5.mp3"
+    duration_seconds: 10
+
+arduino:
+  port: "/dev/ttyUSB0"
+  baudrate: 9600
+  reconnect_interval_seconds: 10
+  command_timeout_seconds: 5
+
+server:
+  host: "0.0.0.0"
+  port: 8080
+
+sources:
+  streamlabs:
+    enabled: true
+    socket_token: "REPLACE_WITH_STREAMLABS_SOCKET_TOKEN"
+    reconnect_backoff_seconds: 5
+    max_backoff_seconds: 60
+
+database_path: "data/donations.db"
