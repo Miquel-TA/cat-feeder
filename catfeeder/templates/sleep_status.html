@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cat Shelter Sleep Mode</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/sleep.css">
+</head>
+<body>
+    <div class="status" id="sleep-status" data-sleeping="{{ 'true' if is_sleeping else 'false' }}">
+        <div class="indicator"></div>
+        <h1 id="status-text">{{ 'Sleep mode active' if is_sleeping else 'Feeding active' }}</h1>
+        <p>Next change: <span id="next-transition">{{ next_transition }}</span></p>
+    </div>
+    <script src="/static/js/sleep.js"></script>
+</body>
+</html>
